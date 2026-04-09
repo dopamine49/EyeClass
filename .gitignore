@@ -1,0 +1,17 @@
+# Secrets
+backend/src/main/resources/firebase-config.json
+database/config/firebase-config.json
+eyeclass-website-firebase-adminsdk-fbsvc-c9949d8eea.json
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/build/
+
+# Java/Maven
+backend/target/
+
+# IDE/macOS
+.DS_Store
+.vscode/
+.idea/

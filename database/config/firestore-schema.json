@@ -1,0 +1,65 @@
+// Firestore collections schema example
+
+{
+  "collections": {
+    "users": {
+      "description": "사용자 정보",
+      "fields": {
+        "uid": "string (Firebase UID)",
+        "email": "string",
+        "name": "string",
+        "phone": "string",
+        "address": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      }
+    },
+    "products": {
+      "description": "상품 정보",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "description": "string",
+        "price": "number",
+        "category": "string (men, women, kids)",
+        "imageUrl": "string",
+        "stock": "number",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      }
+    },
+    "orders": {
+      "description": "주문 정보",
+      "fields": {
+        "id": "string",
+        "userId": "string",
+        "products": "array",
+        "totalPrice": "number",
+        "status": "string (pending, completed, cancelled)",
+        "shippingAddress": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      }
+    },
+    "carts": {
+      "description": "장바구니",
+      "fields": {
+        "userId": "string",
+        "items": "array of {productId, quantity, price}",
+        "totalPrice": "number",
+        "updatedAt": "timestamp"
+      }
+    },
+    "reviews": {
+      "description": "제품 리뷰",
+      "fields": {
+        "id": "string",
+        "productId": "string",
+        "userId": "string",
+        "rating": "number (1-5)",
+        "comment": "string",
+        "createdAt": "timestamp"
+      }
+    }
+  }
+}

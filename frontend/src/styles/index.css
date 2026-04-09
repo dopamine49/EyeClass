@@ -1,0 +1,37 @@
+@import url('https://fonts.cdnfonts.com/css/google-sans');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Google Sans', 'Google Sans Text', 'Be Vietnam Pro', sans-serif;
+  background:
+    radial-gradient(circle at 5% 12%, rgba(216, 180, 254, 0.46), transparent 30%),
+    radial-gradient(circle at 92% 8%, rgba(196, 181, 253, 0.5), transparent 32%),
+    linear-gradient(150deg, #ffffff 0%, #f8f3ff 48%, #f3ecff 100%);
+  color: #2f1c4e;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+}

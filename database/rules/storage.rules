@@ -1,0 +1,24 @@
+// Firebase Storage Rules for Eyecare Glass
+
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Allow anyone to read product images
+    match /products/{allPaths=**} {
+      allow read: if true;
+      allow write: if false; // Only via backend
+    }
+
+    // Allow users to read/write their own profile pictures
+    match /users/{userId}/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth.uid == userId;
+    }
+
+    // Allow users to upload order receipts
+    match /orders/{userId}/{allPaths=**} {
+      allow read, write: if request.auth.uid == userId;
+    }
+  }
+}

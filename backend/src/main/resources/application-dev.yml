@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: eyecare-glass-backend
+  servlet:
+    multipart:
+      max-file-size: 6MB
+      max-request-size: 6MB
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  datasource:
+    url: jdbc:h2:mem:eyecare_glass_dev
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+# CORS Configuration
+cors:
+  allowed-origins: http://localhost:3000,http://localhost:5173
+  allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+  allowed-headers: '*'
+  allow-credentials: true
+
+# Firebase Configuration
+firebase:
+  project-id: ${FIREBASE_PROJECT_ID:eyeclass-website}
+  config-path: classpath:firebase-config.json
+  storage-bucket: ${FIREBASE_STORAGE_BUCKET:}
+
+security:
+  jwt:
+    secret: YjN5QWVrWmV2VExiZ1N5TjFYNjZ4ZjYxS2N6TE5hVW9qS2VYcFRwN1ZmYz0=
+    expiration-ms: 86400000
+
+logging:
+  level:
+    org.springframework.web: INFO
+    org.hibernate.SQL: INFO

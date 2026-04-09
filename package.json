@@ -1,0 +1,25 @@
+{
+  "name": "eyecare-glass-website",
+  "version": "1.0.0",
+  "description": "Complete eyecare glasses website - Frontend (React), Backend (Java), Database (Firebase)",
+  "private": true,
+  "scripts": {
+    "frontend:install": "cd frontend && npm install",
+    "frontend:start": "cd frontend && npm start",
+    "frontend:build": "cd frontend && npm run build",
+    "backend:install": "cd backend && mvn clean install",
+    "backend:start": "cd backend && mvn spring-boot:run",
+    "backend:build": "cd backend && mvn clean package",
+    "setup": "npm run frontend:install && npm run backend:install"
+  },
+  "keywords": [
+    "eyecare",
+    "glasses",
+    "e-commerce",
+    "react",
+    "java",
+    "firebase"
+  ],
+  "author": "",
+  "license": "MIT"
+}
