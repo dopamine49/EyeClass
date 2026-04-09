@@ -13,6 +13,7 @@ import ProductDetail from './pages/ProductDetail';
 import TryOnStudio from './pages/TryOnStudio';
 import Account from './pages/Account';
 import Wishlist from './pages/Wishlist';
+import PaymentReturn from './pages/PaymentReturn'; // ✅ thêm dòng này
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
 import { WishlistProvider } from './context/WishlistContext';
@@ -38,6 +39,7 @@ function App() {
               <Route path="/account" element={<Account />} />
               <Route path="/login" element={<Login />} />
               <Route path="/admin" element={<Admin />} />
+              <Route path="/payment-return" element={<PaymentReturn />} /> {/* ✅ thêm dòng này */}
             </Routes>
           </BrowserRouter>
         </CartProvider>
